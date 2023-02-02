@@ -29,24 +29,25 @@ class _HomePageState extends State<HomePage> with Loader, Messages {
     return Scaffold(
       appBar: DeliveryAppbar(),
       body: BlocConsumer<HomeController, HomeState>(
-          listener: (context, state) {},
-          builder: (context, state) {
-            return Column(
-              children: [
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: state.products.length,
-                    itemBuilder: (context, index) {
-                      final product = state.products[index];
-                      return DeliveryProductTile(
-                        product: product,
-                      );
-                    },
-                  ),
+        listener: (context, state) {},
+        builder: (context, state) {
+          return Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemCount: state.products.length,
+                  itemBuilder: (context, index) {
+                    final product = state.products[index];
+                    return DeliveryProductTile(
+                      product: product,
+                    );
+                  },
                 ),
-              ],
-            );
-          }),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
