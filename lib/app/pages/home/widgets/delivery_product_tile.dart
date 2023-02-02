@@ -32,7 +32,7 @@ class DeliveryProductTile extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: Text(
                     product.description,
-                    style: context.textStyles.textLight.copyWith(
+                    style: context.textStyles.textRegular.copyWith(
                       fontSize: 12,
                     ),
                   ),
@@ -42,7 +42,7 @@ class DeliveryProductTile extends StatelessWidget {
                   child: Text(
                     product.price.currencyPTBT,
                     style: context.textStyles.textLight.copyWith(
-                        fontSize: 11, color: context.colors.secondary),
+                        fontSize: 12, color: context.colors.secondary),
                   ),
                 ),
               ],
